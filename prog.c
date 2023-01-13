@@ -11,18 +11,15 @@
 
 #include <stdlib.h>
 
-nop()
-{
+nop() {
 /* step vs next command */
 }
 
-func1(int arg)
-{
-    func2 (arg+1);
+func1(int arg) {
+    func2(arg + 1);
 }
 
-func2(int arg)
-{
+func2(int arg) {
     int val = arg;
     char *ptr = NULL;  /* Here is part of the bug, setting ptr to NULL */
 
@@ -35,8 +32,7 @@ func2(int arg)
     }
 }
 
-main()
-{
+main() {
     func1(1);
 }
 
